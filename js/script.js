@@ -11,11 +11,11 @@ function triangleCalculator(){
     const height = parseFloat(heightFieldText);
 
     // area calculate
-    const area = 0.5 * base * height;
+    const areaTri = 0.5 * base * height;
 
     // show area
-    const areaResult = document.getElementById('show-area');
-    areaResult.innerText = area;
+    const triangleArea = document.getElementById('triangle-area');
+    triangleArea.innerText = areaTri;
 }
 
 
@@ -24,8 +24,17 @@ function rectangleCalculator(){
     // get the rectangle width value
     const widthField = document.getElementById('rectangle-width');
     const widthFieldText = widthField.value;
-    const widthFieldValue = parseFloat(widthFieldText);
+    const width = parseFloat(widthFieldText);
 
     // get the rectangle length value
     const lengthField = document.getElementById('rectangle-length');
+    const lengthFieldText = lengthField.value;
+    const length = parseFloat(lengthFieldText);
+
+    // area calculate
+    const areaRect = width * length;
+
+    // show area
+    const rectangleArea = document.getElementById('rectangle-area');
+    rectangleArea.innerText = areaRect;
 }
