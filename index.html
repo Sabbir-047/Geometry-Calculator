@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<html data-theme="light">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header>
+
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!-- container -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- shape container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Triangle -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/triangle.png" alt="Triangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle!</h2>
+                        <p>Area (A) = 0.5 x b x h</p>
+                        <p>
+                            <input id="triangle-base" type="text" class="border text-md w-24 px-3 rounded-lg bg-gray-200" placeholder="base">
+                            <span class="mx-2">cm </span>
+                            <input id="triangle-height" type="text" class="border text-md w-24 px-3 rounded-lg bg-gray-200" placeholder="height">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p>Area: <span id="show-area">0</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button onclick="triangleCalculator()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rectangle -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rectangle!</h2>
+                        <p>Area (A) = b x h</p>
+                        <p>
+                            <input id="rectangle-width" type="text" class="border text-md w-24 px-3 rounded-lg bg-gray-200" placeholder="width">
+                            <span class="mx-2">cm </span>
+                            <input id="rectangle-length" type="text" class="border text-md w-24 px-3 rounded-lg bg-gray-200" placeholder="length">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p>Area: <span id="rectangle-area">0</span> cm<sup>2</sup></p>
+                        <div class="card-actions">
+                            <button onclick="rectangleCalculator()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Parallelogram! -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Parallelogram!</h2>
+                        <p>Area (A) = b x h</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- area container -->
+            <div class="w-[400px]">
+                <div class="text-4xl">
+                    Area Calculator
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="js/script.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
