@@ -10,6 +10,12 @@ function triangleCalculator(){
     const heightFieldText = heightField.value;
     const height = parseFloat(heightFieldText);
 
+    // validation
+    if (isNaN(base) || isNaN(height)) {
+        alert('Please input a valid number');
+        return;
+    }
+
     // area calculate
     const areaTri = 0.5 * base * height;
 
@@ -40,6 +46,15 @@ function rectangleCalculator(){
 }
 
 
+/**
+ * 
+ * from here to top. the code is not reduced. We are using the same code again and again.
+ * 
+ * from here to down the code is reduced. We are using function to reduce it
+ * 
+ */
+
+
 // Parallelogram calculator
 function parallelogramCalculator(){
     const base = getInputValue('parallelogram-base');
@@ -53,7 +68,8 @@ function ellipseCalculator(){
     const base = getInputValue('ellipse-base');
     const height = getInputValue('ellipse-height');
     const area = 3.1416 * base * height;
-    setElementInnerText('ellipse-area', area);
+    const areaTwoDecimal = area.toFixed(2);
+    setElementInnerText('ellipse-area', areaTwoDecimal);
 }
 
 // reusable input value field in number
@@ -69,3 +85,12 @@ function setElementInnerText(elementId, area){
     const element = document.getElementById(elementId);
     element.innerText = area;
 }
+
+
+
+// Data validation
+/**
+ * 1. set the proper type of the input field.
+ * 2. check type using typeof
+ * 3. NaN means: not a number. isNaN is checking whether the input is not a number or not
+ */
