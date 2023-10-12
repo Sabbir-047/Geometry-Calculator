@@ -40,12 +40,20 @@ function rectangleCalculator(){
 }
 
 
-// reusable function
+// Parallelogram calculator
 function parallelogramCalculator(){
     const base = getInputValue('parallelogram-base');
     const height = getInputValue('parallelogram-height');
     const area = base * height;
     setElementInnerText('parallelogram-area', area);
+}
+
+// Ellipse Calculator
+function ellipseCalculator(){
+    const base = getInputValue('ellipse-base');
+    const height = getInputValue('ellipse-height');
+    const area = 3.1416 * base * height;
+    setElementInnerText('ellipse-area', area);
 }
 
 // reusable input value field in number
